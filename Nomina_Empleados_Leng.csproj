@@ -9,11 +9,21 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Entidades\" />
-    <Folder Include="DAL\" />
-    <Folder Include="BLL\" />
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\EmpleadoNomina.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

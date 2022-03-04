@@ -25,7 +25,6 @@ namespace Nomina_Empleados_Leng.UI.Registros
         public rNominas()
         {
             InitializeComponent();
-            InitializeComponent();
             this.DataContext = nominas;
             //——————————————————————————[ VALORES DEL ComboBox Empleado Id]——————————————————————————
             EmpleadoComboBox.ItemsSource = EmpleadosBLL.GetEmpleados();
@@ -104,7 +103,7 @@ namespace Nomina_Empleados_Leng.UI.Registros
             }
         }
 
-        private void NominasIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void IdTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
             {
@@ -210,6 +209,11 @@ namespace Nomina_Empleados_Leng.UI.Registros
             }
 
             return Validado;
+        }
+
+        private void SalarioMensualTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

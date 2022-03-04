@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nomina_Empleados_Leng"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        Title="Sistema de Nomina de Empleados" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-
+        <StackPanel>
+            <Menu Height="50">
+                <MenuItem Header="Registros">
+                    <MenuItem Header="Registro de Empleados" x:Name="Registro_Empleados" Click="Registro_Empleados_Click"/>
+                    <MenuItem Header="Registro de Nominas" x:Name="Registro_Nominas" Click="Registro_Nominas_Click"/>
+                </MenuItem>
+                <MenuItem Header="Consultas">
+                    <MenuItem Header="Consulta de Empleados" x:Name="Consulta_Empleados" Click="Consulta_Empleados_Click"/>
+                    <MenuItem Header="Consulta de Nominas" x:Name="Consulta_Nominas" Click="Consulta_Nominas_Click"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
