@@ -204,10 +204,5 @@ namespace Nomina_Empleados_Leng.UI.Registros
 
             return Validado;
         }
-
-        private void SalarioMensualTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
