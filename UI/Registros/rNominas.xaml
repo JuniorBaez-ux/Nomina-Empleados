@@ -36,48 +36,48 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="CarMultiple" Height="30" Width="40" />
+                    <materialDesign:PackIcon Kind="Cash" Height="30" Width="40" />
                     <TextBox x:Name="SalarioMensualTextBox" Height="25" Width="200" Text="{Binding SalarioMensual}" materialDesign:HintAssist.Hint="Inserte el salario mensual..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Salario Mensual"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="CarSelect" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="TimerSand" Height="30" Width="40"/>
                     <TextBox x:Name="HorasExtraTextBox" Height="25" Width="200" Text="{Binding HorasExtra}" materialDesign:HintAssist.Hint="Inserte las horas extras..." materialDesign:HintAssist.HintOpacity=".25"  materialDesign:HintAssist.HelperText="Horas extras"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="CarEstate" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="Calendar" Height="30" Width="40"/>
                     <DatePicker x:Name="FechaTextBox" Height="25" Width="200" Text="{Binding Fecha}" materialDesign:HintAssist.Hint="Inserte la fecha..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Fecha"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:PackIcon Kind="Color" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="CashMinus" Height="30" Width="40"/>
                     <TextBox x:Name="SFSTextBox" Height="25"  Width="200" Text="{Binding SFS}" materialDesign:HintAssist.Hint="SFS del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="SFS"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:PackIcon Kind="CardText" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="CashMinus" Height="30" Width="40"/>
                     <TextBox x:Name="AFPTextBox" Height="25"  Width="200" Text="{Binding AFP}" materialDesign:HintAssist.Hint="AFP del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="AFP"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:PackIcon Kind="CardText" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="CashMinus" Height="30" Width="40"/>
                     <TextBox x:Name="ISRTextBox" Height="25"  Width="200" Text="{Binding ISR}" materialDesign:HintAssist.Hint="ISR del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="ISR"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:PackIcon Kind="AccountPlus" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="AccountCash" Height="30" Width="40"/>
                     <TextBox x:Name="SueldoTotalTextBox" Height="25"  Width="200" Text="{Binding SueldoTotal}" materialDesign:HintAssist.Hint="Sueldo total del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Sueldo Total"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:PackIcon Kind="Cash" Height="30" Width="40"/>
+                    <materialDesign:PackIcon Kind="CashLock" Height="30" Width="40"/>
                     <TextBox x:Name="TotalDecuentosTextBox" Height="25"  Width="200" Text="{Binding TotalDecuentos}" materialDesign:HintAssist.Hint="Sueldo total del empleado con descuentos..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Total con Descuentos"/>
                 </StackPanel>
             </StackPanel>
