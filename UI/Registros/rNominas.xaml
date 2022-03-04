@@ -17,7 +17,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <materialDesign:PackIcon Kind="Identifier" Height="30" Width="40"/>
-                <TextBox x:Name="IdTextBox" IsReadOnly="True" Height="25" Width="30" Text="{Binding VehiculoId}" materialDesign:HintAssist.Hint="Id..." materialDesign:HintAssist.HintOpacity=".25" />
+                <TextBox x:Name="IdTextBox" Height="25" Width="30" Text="{Binding VehiculoId}" materialDesign:HintAssist.Hint="Id..." materialDesign:HintAssist.HintOpacity=".25" TextChanged="IdTextBox_TextChanged"/>
 
 
                 <StackPanel Orientation="Horizontal" >
@@ -37,12 +37,12 @@
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Cash" Height="30" Width="40" />
-                    <TextBox x:Name="SalarioMensualTextBox" Height="25" Width="200" Text="{Binding SalarioMensual}" materialDesign:HintAssist.Hint="Inserte el salario mensual..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Salario Mensual"/>
+                    <TextBox x:Name="SalarioMensualTextBox" Height="25" Width="200" Text="{Binding SalarioMensual}" materialDesign:HintAssist.Hint="Inserte el salario mensual..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Salario Mensual" TextChanged="SalarioMensualTextBox_TextChanged"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="TimerSand" Height="30" Width="40"/>
-                    <TextBox x:Name="HorasExtraTextBox" Height="25" Width="200" Text="{Binding HorasExtra}" materialDesign:HintAssist.Hint="Inserte las horas extras..." materialDesign:HintAssist.HintOpacity=".25"  materialDesign:HintAssist.HelperText="Horas extras"/>
+                    <TextBox x:Name="HorasExtraTextBox" Height="25" Width="200" Text="{Binding HorasExtra}" materialDesign:HintAssist.Hint="Inserte las horas extras..." materialDesign:HintAssist.HintOpacity=".25"  materialDesign:HintAssist.HelperText="Horas extras" TextChanged="HorasExtraTextBox_TextChanged"/>
                 </StackPanel>
             </StackPanel>
 
@@ -56,29 +56,29 @@
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="CashMinus" Height="30" Width="40"/>
-                    <TextBox x:Name="SFSTextBox" Height="25"  Width="200" Text="{Binding SFS}" materialDesign:HintAssist.Hint="SFS del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="SFS"/>
+                    <TextBox IsReadOnly="True" x:Name="SFSTextBox" Height="25"  Width="200" Text="{Binding SFS}" materialDesign:HintAssist.Hint="SFS del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="SFS"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="CashMinus" Height="30" Width="40"/>
-                    <TextBox x:Name="AFPTextBox" Height="25"  Width="200" Text="{Binding AFP}" materialDesign:HintAssist.Hint="AFP del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="AFP"/>
+                    <TextBox IsReadOnly="True" x:Name="AFPTextBox" Height="25"  Width="200" Text="{Binding AFP}" materialDesign:HintAssist.Hint="AFP del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="AFP"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="CashMinus" Height="30" Width="40"/>
-                    <TextBox x:Name="ISRTextBox" Height="25"  Width="200" Text="{Binding ISR}" materialDesign:HintAssist.Hint="ISR del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="ISR"/>
+                    <TextBox IsReadOnly="True" x:Name="ISRTextBox" Height="25"  Width="200" Text="{Binding ISR}" materialDesign:HintAssist.Hint="ISR del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="ISR"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="AccountCash" Height="30" Width="40"/>
-                    <TextBox x:Name="SueldoTotalTextBox" Height="25"  Width="200" Text="{Binding SueldoTotal}" materialDesign:HintAssist.Hint="Sueldo total del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Sueldo Total"/>
+                    <TextBox IsReadOnly="True" x:Name="SueldoTotalTextBox" Height="25"  Width="200" Text="{Binding SueldoTotal}" materialDesign:HintAssist.Hint="Sueldo total del empleado..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Sueldo Total"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="CashLock" Height="30" Width="40"/>
-                    <TextBox x:Name="TotalDecuentosTextBox" Height="25"  Width="200" Text="{Binding TotalDecuentos}" materialDesign:HintAssist.Hint="Sueldo total del empleado con descuentos..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Total con Descuentos"/>
+                    <TextBox IsReadOnly="True" x:Name="TotalDecuentosTextBox" Height="25"  Width="200" Text="{Binding TotalDecuentos}" materialDesign:HintAssist.Hint="Sueldo total del empleado con descuentos..." materialDesign:HintAssist.HintOpacity=".25" materialDesign:HintAssist.HelperText="Total con Descuentos"/>
                 </StackPanel>
             </StackPanel>
 
