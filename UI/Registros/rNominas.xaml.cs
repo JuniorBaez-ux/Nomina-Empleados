@@ -26,7 +26,7 @@ namespace Nomina_Empleados_Leng.UI.Registros
         {
             InitializeComponent();
             this.DataContext = nominas;
-            //——————————————————————————[ VALORES DEL ComboBox Empleado Id]——————————————————————————
+            //Llenando el combo box de empleados
             EmpleadoComboBox.ItemsSource = EmpleadosBLL.GetEmpleados();
             EmpleadoComboBox.SelectedValuePath = "EmpleadoId";
             EmpleadoComboBox.DisplayMemberPath = "NombreCompleto";
@@ -40,7 +40,6 @@ namespace Nomina_Empleados_Leng.UI.Registros
             {
                 this.DataContext = null;
                 this.DataContext = encontrado;
-                //Cargar();
             }
             else
             {
@@ -66,8 +65,7 @@ namespace Nomina_Empleados_Leng.UI.Registros
                 if (!Validar())
                     return;
 
-                //———————————————————————————————————————————————————————[ VALIDAR SI ESTA VACIO ]———————————————————————————————————————————————————————
-                //—————————————————————————————————[ Nomina Id ]—————————————————————————————————
+                
                 if (IdTextBox.Text.Trim() == string.Empty)
                 {
                     MessageBox.Show("El Campo (Contacto Id) está vacío.\n\nPorfavor, Asigne un Id al Contacto.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -78,7 +76,6 @@ namespace Nomina_Empleados_Leng.UI.Registros
                 }
 
 
-                //———————————————————————————————————————————————————————[ VALIDAR SI ESTA VACIO - FIN ]———————————————————————————————————————————————————————
                 var paso = NominasBLL.Guardar(nominas);
                 if (paso)
                 {
@@ -145,18 +142,17 @@ namespace Nomina_Empleados_Leng.UI.Registros
 
 
 
-            //—————————————[Formulas para Seguro Familiar de Salud o SFS]—————————————
-
+            //Formula del Seguro familiar de salud (SFS)
             double SFS = 0.0304;
-            //—————————————[Formulas para Administradora de Fondos de Pensiones o AFP]—————————————
+            //Formulas de la Administradora de fondos de pensiones (AFP)
             double AFP = 0.0287;
 
-            //—————————————————————————————————————————[Total SFS y AFP]————————————————————————————————————————————
+            //Total SFS y AFP
             double T_SFS = (nominas.SalarioMensual * SFS);
             double T_AFP = (nominas.SalarioMensual * AFP);
 
 
-            //—————————————[Formulas para Impuesto sobre renta o ISR]—————————————
+            //Formulas del Impuesto sobre renta (ISR)
             //double DEDUC = T_SFS + T_AFP;
             // double RDEDUC = SM - DEDUC;
             // double IMPOx12 = RDEDUC * 12;
@@ -167,7 +163,7 @@ namespace Nomina_Empleados_Leng.UI.Registros
             double T_ISR = nominas.SalarioMensual * 0.10;
             //624329.01
 
-            //—————————————————————————————————————————[Total Descuentos]————————————————————————————————————————————
+            //Total con Descuentos
             double T_Descuentos = (T_SFS + T_AFP + T_ISR);
 
             SFSTextBox.Text = Convert.ToString(Math.Round(T_SFS, 2));
@@ -192,13 +188,11 @@ namespace Nomina_Empleados_Leng.UI.Registros
             this.DataContext = null;
             this.DataContext = nominas;
         }
-        //——————————————————————————————————————————————————————————————[ Limpiar ]——————————————————————————————————————————————————————————————
         private void Limpiar()
         {
             this.nominas = new Nominas();
             this.DataContext = nominas;
         }
-        //——————————————————————————————————————————————————————————————[ Validar ]——————————————————————————————————————————————————————————————
         private bool Validar()
         {
             bool Validado = true;

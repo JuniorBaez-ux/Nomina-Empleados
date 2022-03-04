@@ -12,7 +12,6 @@ namespace Nomina_Empleados_Leng.BLL
 {
     public class EmpleadosBLL
     {
-        //——————————————————————————————————————————————[ GUARDAR ]——————————————————————————————————————————————
         public static bool Guardar(Empleados empleados)
         {
             if (!Existe(empleados.EmpleadoId))
@@ -20,7 +19,6 @@ namespace Nomina_Empleados_Leng.BLL
             else
                 return Modificar(empleados);
         }
-        //——————————————————————————————————————————————[ INSERTAR ]——————————————————————————————————————————————
         private static bool Insertar(Empleados empleados)
         {
             bool paso = false;
@@ -42,7 +40,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return paso;
         }
-        //——————————————————————————————————————————————[ MODIFICAR ]——————————————————————————————————————————————
         public static bool Modificar(Empleados empleados)
         {
             bool paso = false;
@@ -64,7 +61,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return paso;
         }
-        //——————————————————————————————————————————————[ ELIMINAR ]——————————————————————————————————————————————
         public static bool Eliminar(int id)
         {
             bool paso = false;
@@ -90,7 +86,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return paso;
         }
-        //——————————————————————————————————————————————[ BUSCAR ]——————————————————————————————————————————————
         public static Empleados Buscar(int id)
         {
             Contexto contexto = new Contexto();
@@ -111,7 +106,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return empleados;
         }
-        //——————————————————————————————————————————————[ GETLIST ]——————————————————————————————————————————————
         public static List<Empleados> GetList(Expression<Func<Empleados, bool>> criterio)
         {
             List<Empleados> lista = new List<Empleados>();
@@ -132,7 +126,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return lista;
         }
-        //——————————————————————————————————————————————[ EXISTE ]——————————————————————————————————————————————
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
@@ -153,7 +146,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return encontrado;
         }
-        //——————————————————————————————————————————————[ GetList ]——————————————————————————————————————————————
         public static List<Empleados> GetList()
         {
             List<Empleados> empleados = new List<Empleados>();
@@ -174,7 +166,6 @@ namespace Nomina_Empleados_Leng.BLL
 
             return empleados;
         }
-        //——————————————————————————————————————————————[ GET ]——————————————————————————————————————————————
         public static List<Empleados> GetEmpleados()
         {
             List<Empleados> lista = new List<Empleados>();
